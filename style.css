@@ -55,7 +55,7 @@ body {
   height: 60%;
 }
 .price-box {
-  flex-basis: 20%;
+  flex-basis: 270px;
   margin: 20px 0;
   border-radius: 10px 0 0 10px;
   padding: 20px;
@@ -71,7 +71,7 @@ body {
 .professional {
   margin: 0;
   height: max-content;
-  flex-basis: 18%;
+  flex-basis: 225px;
   padding: 40px;
   border-radius: 10px;
   background: var(--primary);
@@ -105,33 +105,35 @@ body {
 }
 
 .btn {
-  width: 80%;
+  cursor: pointer;
+  width: 90%;
   height: 40px;
   margin-top: 30px;
   border: 2px solid var(--LightGrayishBlue);
-  background-color: transparent;
+  background: var(--primary);
   border-radius: 5px;
-  font-size: 1rem;
-  color: var(--GrayishBlue);
+  font-size: 14px;
+  color: #fff;
   font-weight: bolder;
 }
 
 .btn:hover {
-  background-color: hsl(237, 63%, 64%);
-  color: var(--VeryLightGrayishBlue);
+  cursor: pointer;
+  background: #fff;
+  color: var(--GrayishBlue);
 }
 
 .btn-professional:hover {
-  background-color: var(--primary);
-  color: var(--VeryLightGrayishBlue);
-  border: 1px solid var(--VeryLightGrayishBlue);
+  cursor: pointer;
+  background: var(--primary);
+  color: #fff;
 }
 
 .btn-professional {
-  background-color: white;
+  cursor: pointer;
+  width: 100%;
+  background: #fff;
   color: hsl(237, 63%, 64%);
-  border: 2px solid white;
-  width: 90%;
 }
 
 .switch-div {
@@ -160,7 +162,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--LightGrayishBlue);
+  background: var(--primary);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -198,4 +200,10 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .price-box {
+    border-radius: 10px;
+  }
 }
