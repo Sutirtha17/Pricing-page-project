@@ -1,0 +1,201 @@
+:root {
+  --primary: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  --VeryLightGrayishBlue: hsl(240, 78%, 98%);
+  --LightGrayishBlue: hsl(234, 14%, 74%);
+  --GrayishBlue: hsl(233, 13%, 49%);
+  --DarkGrayishBlue: hsl(232, 13%, 33%);
+}
+ul {
+  list-style-type: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  background-image: url('../images/bg-top.svg'), url('../images/bg-bottom.svg');
+  background-color: hsl(240, 78%, 98%);
+  background-repeat: no-repeat;
+  background-position: top right, bottom left;
+  height: 100vh;
+}
+
+.inner-div {
+  height: max-content;
+  width: 90%;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.inner-div > h1 {
+  margin: 40px;
+  color: var(--GrayishBlue);
+  font-size: 2rem;
+  font-weight: 700;
+}
+.switch-div > h4 {
+  padding: 5px;
+  color: var(--LightGrayishBlue);
+  font-weight: bolder;
+}
+.inner-div > span {
+  display: inline;
+}
+
+.price-details {
+  display: flex;
+  margin: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 60%;
+}
+.price-box {
+  flex-basis: 20%;
+  margin: 20px 0;
+  border-radius: 10px 0 0 10px;
+  padding: 20px;
+  background-color: white;
+  vertical-align: baseline;
+  color: var(--GrayishBlue);
+  font-weight: 700;
+}
+.basic {
+  border-radius: 10px 0 0 10px;
+}
+
+.professional {
+  margin: 0;
+  height: max-content;
+  flex-basis: 18%;
+  padding: 40px;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+}
+
+.master {
+  border-radius: 0 10px 10px 0;
+}
+
+.price {
+  font-size: 3.5rem;
+  margin: 15px 0;
+  color: black;
+  font-weight: bolder;
+}
+
+.price-professional {
+  color: white;
+}
+
+.dollar-sign {
+  font-size: 2rem;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.plan-items {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--LightGrayishBlue);
+}
+
+.btn {
+  width: 80%;
+  height: 40px;
+  margin-top: 30px;
+  border: 2px solid var(--LightGrayishBlue);
+  background-color: transparent;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: var(--GrayishBlue);
+  font-weight: bolder;
+}
+
+.btn:hover {
+  background-color: hsl(237, 63%, 64%);
+  color: var(--VeryLightGrayishBlue);
+}
+
+.btn-professional:hover {
+  background-color: var(--primary);
+  color: var(--VeryLightGrayishBlue);
+  border: 1px solid var(--VeryLightGrayishBlue);
+}
+
+.btn-professional {
+  background-color: white;
+  color: hsl(237, 63%, 64%);
+  border: 2px solid white;
+  width: 90%;
+}
+
+.switch-div {
+  display: flex;
+  justify-content: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 0 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--LightGrayishBlue);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--LightGrayishBlue);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--LightGrayishBlue);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
